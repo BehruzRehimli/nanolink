@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0% !important;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./assets/fonts/proximanova_bold.otf') format('opentype');
+    font-weight: 700;
+    /* bold için */
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./assets/fonts/proximanova_regular.ttf') format('truetype');
+    font-weight: 400;
+    /* regular için */
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./assets/fonts/proximanova_light.otf') format('opentype');
+    font-weight: 300;
+    /* light için */
+}
+
+body {
+    background-color: #080915 !important;
+    padding: 100px 0px;
+
+    * {
+        color: white;
+        font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    }
+}
+
+.color-second {
+    color: #F2F2F2;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.tab {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    border-width: 0;
+    border-bottom: 2px solid transparent;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: 'Proxima Nova';
+    border-radius: 0%;
+    overflow-x: auto;
+}
+
+.tab.active {
+    border-color: #0A8BEC;
+}
+
+.ffp {
+    font-family: 'Proxima Nova';
+}
