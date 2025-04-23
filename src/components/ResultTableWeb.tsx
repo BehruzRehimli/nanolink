@@ -33,21 +33,71 @@ interface DataType {
 const columns: ColumnsType<DataType> = [
   {
     title: "Rank",
-    dataIndex:"rank",
-    render:(data:any)=>{
+    dataIndex: "rank",
+    render: (data: any) => {
       return <span className="rank-box">{data}</span>
     },
     key: "rank",
-    width:50
+    width: "5%"
   },
   {
     title: "Team",
-    dataIndex:"team",
-    render:(data:any)=>{
+    dataIndex: "team",
+    render: (data: any) => {
       return <div className="d-flex gap-2 align-items-center">{getFlag(data?.name)}{data?.name}</div>
     },
     key: "rank",
+    width: "8%"
   },
+  {
+    title: "Bib",
+    dataIndex: "bib",
+    key: "bib",
+    width: "5%"
+  },
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    width: "50%"
+  },
+  {
+    title: "D",
+    dataIndex: "d",
+    render: (d: any) => <div>
+      <p className="number">{Number(d).toFixed(3)}</p>
+      <p className="mt-2 number">{Number(d).toFixed(3)}</p>
+    </div>,
+    width:"8%"
+  },
+  {
+    title: "E",
+    dataIndex: "e",
+    render: (e: any) => <div>
+      <p className="number">{Number(e).toFixed(3)}</p>
+      <p className="mt-2 number">{Number(e).toFixed(3)}</p>
+    </div>,
+    width:"8%"
+  },
+  {
+    title: "Pen",
+    dataIndex: "pen",
+    render: (pen: any) => <div>
+      <p className="number">{Number(pen).toFixed(3)}</p>
+      <p className="mt-2 number">{Number(pen).toFixed(3)}</p>
+    </div>,
+    width:"8%"
+  },
+  {
+    title: "Total",
+    dataIndex: "total",
+    render: (total: any) => <div>
+      <p className="number">{Number(total).toFixed(3)}</p>
+      <p className="mt-2 number">{Number(total).toFixed(3)}</p>
+      <p className="mt-2 number orange">{Number(total).toFixed(3)}</p>
+    </div>,
+    width:"8%"
+  }
 ];
 
 const ResultTableWeb = ({ filter }: { filter: Filter }) => {
@@ -77,7 +127,7 @@ const ResultTableWeb = ({ filter }: { filter: Filter }) => {
       {datas != null ? (
         <Table columns={columns} dataSource={datas} pagination={false} />
       ) : (
-        <div className="w-100 d-flex justify-content-center pt-5" style={{minHeight:500}}>
+        <div className="w-100 d-flex justify-content-center pt-5" style={{ minHeight: 500 }}>
           <Spin size="large" />
         </div>
       )}
