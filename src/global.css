@@ -1,67 +1,125 @@
 * {
-    padding: 0;
-    margin: 0% !important;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0% !important;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./assets/fonts/proximanova_bold.otf') format('opentype');
-    font-weight: 700;
-    /* bold için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_bold.otf") format("opentype");
+  font-weight: 700;
+  /* bold için */
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./assets/fonts/proximanova_regular.ttf') format('truetype');
-    font-weight: 400;
-    /* regular için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  /* regular için */
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./assets/fonts/proximanova_light.otf') format('opentype');
-    font-weight: 300;
-    /* light için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_light.otf") format("opentype");
+  font-weight: 300;
+  /* light için */
 }
 
 body {
-    background-color: #080915 !important;
-    padding: 100px 0px;
+  background-color: #080915 !important;
+  padding: 100px 0px;
 
-    * {
-        color: white;
-        font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-    }
+  * {
+    color: white;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  }
 }
 
 .color-second {
-    color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .fs-20 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .tab {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70px;
-    border-width: 0;
-    border-bottom: 2px solid transparent;
-    font-weight: 300;
-    font-size: 20px;
-    font-family: 'Proxima Nova';
-    border-radius: 0%;
-    overflow-x: auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border-width: 0;
+  border-bottom: 2px solid transparent;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Proxima Nova";
+  border-radius: 0%;
+  overflow-x: auto;
 }
 
 .tab.active {
-    border-color: #0A8BEC;
+  border-color: #0a8bec;
 }
 
 .ffp {
-    font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
+}
+
+.filter-box {
+  border: 1px solid #1a1635;
+  border-radius: 8px;
+  display: flex;
+}
+.filter-item {
+  padding: 25px 35px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+}
+.filter-item.active {
+  background-color: #1a1635;
+}
+.filter-item.active:hover {
+  background: #1a1635 !important;
+}
+.rank-box {
+  display: flex !important;
+  width: 32px;
+  height: 32px;
+  background-color: #0a8bec !important;
+  justify-content: center;
+  align-items: center;
+}
+.ant-table-wrapper .ant-table {
+  background: none;
+  * {
+    color: white !important;
+  }
+  thead .ant-table-cell {
+    background: none !important;
+  }
+  .ant-table-cell {
+    border: none !important;
+  }
+  .ant-table-cell::before {
+    background-color: transparent !important;
+  }
+  .ant-table-row {
+    position: relative;
+  }
+  .ant-table-row::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 1px;
+    background: linear-gradient(to right, #080915, #6a21f4e5);
+    width: 100%;
+  }
+  .ant-table-row .ant-table-cell-row-hover {
+    background: none !important;
+  }
 }
