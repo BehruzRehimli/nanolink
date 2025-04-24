@@ -1,5 +1,7 @@
-import { Button } from "antd";
+import { Button, Modal } from "antd";
 import { Filter } from "./Result";
+import { useState } from "react";
+import { filters } from "../constants/filter";
 
 const FilterMobile = ({
   filter,
@@ -8,10 +10,12 @@ const FilterMobile = ({
   filter: Filter;
   setFilter: Function;
 }) => {
+  const [modal, setModal] = useState<boolean>(false);
+
   return (
     <div className="filter-mobile">
       <div className="text-end mt-4">
-        <Button type="text">
+        <Button type="text" onClick={() => setModal(true)}>
           <div className="filter-button">
             <svg
               width="16"
@@ -173,6 +177,115 @@ const FilterMobile = ({
           </div>
         )}
       </div>
+      <Modal
+        title={"Filter"}
+        closeIcon={<span>x</span>}
+        footer={[]}
+        open={modal}
+        onCancel={() => setModal(false)}
+      >
+        <div>
+          <div className="d-flex flex-column gap-3 mt-3">
+            <div className="filter-box">
+              {filters.genders.map((gender: string) => (
+                <Button
+                  key={gender}
+                  type="text"
+                  onClick={() => {
+                    if (filter.gender == gender) {
+                      setFilter((prev: Filter) => ({ ...prev, gender: null }));
+                    } else {
+                      setFilter((prev: Filter) => ({ ...prev, gender }));
+                    }
+                  }}
+                  className={`filter-item ${
+                    filter.gender == gender && "active"
+                  }`}
+                >
+                  {gender}
+                </Button>
+              ))}
+            </div>
+            <div className="filter-box">
+              {filters.steps.map((step: string) => (
+                <Button
+                  key={step}
+                  type="text"
+                  onClick={() => {
+                    if (filter.step == step) {
+                      setFilter((prev: Filter) => ({ ...prev, step: null }));
+                    } else {
+                      setFilter((prev: Filter) => ({ ...prev, step }));
+                    }
+                  }}
+                  className={`filter-item ${filter.step == step && "active"}`}
+                >
+                  {step}
+                </Button>
+              ))}
+            </div>
+            <div className="filter-box " style={{ overflowX: "auto" }}>
+              {filters.types.map((type: string) => (
+                <Button
+                  key={type}
+                  type="text"
+                  onClick={() => {
+                    if (filter.type == type) {
+                      setFilter((prev: Filter) => ({ ...prev, type: null }));
+                    } else {
+                      setFilter((prev: Filter) => ({ ...prev, type }));
+                    }
+                  }}
+                  className={`filter-item ${filter.type == type && "active"}`}
+                >
+                  {type}
+                </Button>
+              ))}
+            </div>
+            <div className="filter-box">
+              {filters.levels.map((level: string) => (
+                <Button
+                  key={level}
+                  type="text"
+                  onClick={() => {
+                    if (filter.level == level) {
+                      setFilter((prev: Filter) => ({ ...prev, level: null }));
+                    } else {
+                      setFilter((prev: Filter) => ({ ...prev, level }));
+                    }
+                  }}
+                  className={`filter-item ${filter.level == level && "active"}`}
+                >
+                  {level}
+                </Button>
+              ))}
+            </div>
+            <div className="filter-box " style={{ overflowX: "auto" }}>
+              {filters?.branches?.map((branch: any) => (
+                <Button
+                  key={branch.name}
+                  type="text"
+                  onClick={() => {
+                    if (filter.branch == branch.name) {
+                      setFilter((prev: Filter) => ({ ...prev, branch: null }));
+                    } else {
+                      setFilter((prev: Filter) => ({
+                        ...prev,
+                        branch: branch.name,
+                      }));
+                    }
+                  }}
+                  className={`filter-item ${
+                    filter.branch == branch.name && "active"
+                  }`}
+                >
+                  {branch.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

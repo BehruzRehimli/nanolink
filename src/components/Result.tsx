@@ -26,7 +26,7 @@ const Result = () => {
     step: "Qualification",
     type: "Apparatus",
     level: "Seniors",
-    branch: "Vault",
+    branch: "Floor Exercise",
   });
 
   const [datas, setDatas] = useState<any>([]);
@@ -42,7 +42,9 @@ const Result = () => {
         mainDatas
           .filter(
             (d: any) =>
-              (filter.type ? (filter.type == d.type): true) &&
+              d.status != "Wait" &&
+              d.status != "Go" &&
+              (filter.type ? filter.type == d.type : true) &&
               (filter.step ? filter.step == d.step : true) &&
               (filter.level ? filter.level == d.level : true) &&
               (filter.branch ? filter.branch == d.branch : true) &&

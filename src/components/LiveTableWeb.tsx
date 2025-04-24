@@ -146,7 +146,7 @@ const LiveTableWeb = ({datas}:{datas:DataType[]}) => {
     },
   ];
   return (
-    <div className="table-container pt-5 mt-5 live-table">
+    <div className="table-container pt-4 mt-4 live-table">
       {datas != null ? (
         <Table columns={columns} dataSource={datas} pagination={false} />
       ) : (

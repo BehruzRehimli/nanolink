@@ -17,7 +17,13 @@ const FilterWeb = ({
             <Button
               key={gender}
               type="text"
-              onClick={() => setFilter((prev: Filter) => ({ ...prev, gender }))}
+              onClick={() => {
+                if (filter.gender == gender) {
+                  setFilter((prev: Filter) => ({ ...prev, gender: null }));
+                } else {
+                  setFilter((prev: Filter) => ({ ...prev, gender }));
+                }
+              }}
               className={`filter-item ${filter.gender == gender && "active"}`}
             >
               {gender}
@@ -29,7 +35,13 @@ const FilterWeb = ({
             <Button
               key={step}
               type="text"
-              onClick={() => setFilter((prev: Filter) => ({ ...prev, step }))}
+              onClick={() => {
+                if (filter.step == step) {
+                  setFilter((prev: Filter) => ({ ...prev, step: null }));
+                } else {
+                  setFilter((prev: Filter) => ({ ...prev, step }));
+                }
+              }}
               className={`filter-item ${filter.step == step && "active"}`}
             >
               {step}
@@ -41,7 +53,13 @@ const FilterWeb = ({
             <Button
               key={type}
               type="text"
-              onClick={() => setFilter((prev: Filter) => ({ ...prev, type }))}
+              onClick={() => {
+                if (filter.type == type) {
+                  setFilter((prev: Filter) => ({ ...prev, type: null }));
+                } else {
+                  setFilter((prev: Filter) => ({ ...prev, type }));
+                }
+              }}
               className={`filter-item ${filter.type == type && "active"}`}
             >
               {type}
@@ -53,7 +71,13 @@ const FilterWeb = ({
             <Button
               key={level}
               type="text"
-              onClick={() => setFilter((prev: Filter) => ({ ...prev, level }))}
+              onClick={() => {
+                if (filter.level == level) {
+                  setFilter((prev: Filter) => ({ ...prev, level: null }));
+                } else {
+                  setFilter((prev: Filter) => ({ ...prev, level }));
+                }
+              }}
               className={`filter-item ${filter.level == level && "active"}`}
             >
               {level}
@@ -61,17 +85,28 @@ const FilterWeb = ({
           ))}
         </div>
       </div>
-      <div className="d-flex justify-content-center align-items-center mt-5 m-auto" style={{maxWidth:"50%"}}>
+      <div
+        className="d-flex justify-content-center align-items-center mt-5 m-auto"
+        style={{ maxWidth: "50%" }}
+      >
         {filters.branches.map((branch: any) => (
           <Button
             key={branch.name}
             type="text"
-            onClick={() => setFilter((prev: Filter) => ({ ...prev, branch: branch.name}))}
+            onClick={() => {
+              if (filter.branch == branch.name) {
+                setFilter((prev: Filter) => ({ ...prev, branch: null }));
+              } else {
+                setFilter((prev: Filter) => ({ ...prev, branch: branch.name }));
+              }
+            }}
             className={`d-block`}
-            style={{flex:1, minWidth:120 }}
+            style={{ flex: 1, minWidth: 120 }}
           >
             {branch.svg}
-            {filter.branch==branch.name && <p className="ttp mt-2">{branch.name}</p>}
+            {filter.branch == branch.name && (
+              <p className="ttp mt-2">{branch.name}</p>
+            )}
           </Button>
         ))}
       </div>

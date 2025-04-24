@@ -1,58 +1,58 @@
 * {
-    padding: 0;
-    margin: 0% !important;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0% !important;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("./assets/fonts/proximanova_bold.otf") format("opentype");
-    font-weight: 700;
-    /* bold için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_bold.otf") format("opentype");
+  font-weight: 700;
+  /* bold için */
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("./assets/fonts/proximanova_regular.ttf") format("truetype");
-    font-weight: 400;
-    /* regular için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  /* regular için */
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("./assets/fonts/proximanova_light.otf") format("opentype");
-    font-weight: 300;
-    /* light için */
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova_light.otf") format("opentype");
+  font-weight: 300;
+  /* light için */
 }
 
 body {
-    background-color: #080915 !important;
-    padding: 100px 0px;
+  background-color: #080915 !important;
+  padding: 100px 0px;
 
-    * {
-        color: white;
-        font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
-    }
+  * {
+    color: white;
+    font-family: "Proxima Nova", Arial, Helvetica, sans-serif;
+  }
 
-    .number {
-        color: #C4C4C4;
-    }
+  .number {
+    color: #c4c4c4;
+  }
 }
 
 .color-second {
-    color: #f2f2f2;
+  color: #f2f2f2;
 }
 
 .fs-20 {
-    font-size: 20px;
+  font-size: 20px;
 }
-.tab-box{
+.tab-box {
   display: flex;
   overflow-x: auto;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .tab-box::-webkit-scrollbar {
@@ -65,130 +65,137 @@ body {
 }
 
 .tab {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70px;
-    border-width: 0;
-    border-bottom: 2px solid transparent;
-    font-weight: 300;
-    font-size: 20px;
-    font-family: "Proxima Nova";
-    border-radius: 0%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border-width: 0;
+  border-bottom: 2px solid #1A1635;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Proxima Nova";
+  border-radius: 0%;
 }
 
 .tab.active {
-    border-color: #0a8bec;
+  border-color: #0a8bec;
 }
 
 .ffp {
-    font-family: "Proxima Nova";
+  font-family: "Proxima Nova";
 }
 
 .filter-box {
-    border: 1px solid #1a1635;
-    border-radius: 8px;
-    display: flex;
+  border: 1px solid #1a1635;
+  border-radius: 8px;
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 .filter-item {
-    padding: 25px 35px;
-    font-size: 16px;
-    line-height: 24px;
-    border-radius: 8px;
+  padding: 25px 35px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
 }
 
 .filter-item.active {
-    background-color: #1a1635;
+  background-color: #1a1635;
 }
 
 .filter-item.active:hover {
-    background: #1a1635 !important;
+  background: #1a1635 !important;
 }
 
 .rank-box {
-    display: flex !important;
-    width: 32px;
-    height: 32px;
-    background-color: #0a8bec !important;
-    justify-content: center;
-    align-items: center;
+  display: flex !important;
+  width: 32px;
+  height: 32px;
+  background-color: #0a8bec !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .ant-table-wrapper .ant-table {
-    background: none;
+  background: none;
 
-    * {
-        color: white !important;
-    }
+  * {
+    color: white !important;
+  }
 
-    .number {
-        color: #C4C4C4 !important;
-    }
+  .number {
+    color: #c4c4c4 !important;
+  }
 
-    .orange {
-        color: #FF9C07 !important;
-    }
+  .orange {
+    color: #ff9c07 !important;
+  }
 
-    thead .ant-table-cell {
-        background: none !important;
-    }
+  thead .ant-table-cell {
+    background: none !important;
+  }
 
-    .ant-table-row-level-0>td {
-        vertical-align: top;
-    }
-    .ant-table-placeholder{
-        background: transparent !important;
-    }
+  .ant-table-row-level-0 > td {
+    vertical-align: top;
+  }
+  .ant-table-placeholder {
+    background: transparent !important;
+  }
 
-    .ant-table-cell {
-        border: none !important;
-        align-items: flex-start !important;
-    }
+  .ant-table-cell {
+    border: none !important;
+    align-items: flex-start !important;
+  }
 
-    .ant-table-cell::before {
-        background-color: transparent !important;
-    }
+  .ant-table-cell::before {
+    background-color: transparent !important;
+  }
 
-    .ant-table-row {
-        position: relative;
-    }
+  .ant-table-row {
+    position: relative;
+  }
 
-    .ant-table-row::after {
-        content: "";
-        position: absolute;
-        display: block;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-        height: 1px;
-        background: linear-gradient(to right, #080915, #6a21f4e5);
-        width: 100%;
-    }
+  .ant-table-row::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 1px;
+    background: linear-gradient(to right, #080915, #6a21f4e5);
+    width: 100%;
+  }
 
-    .ant-table-row .ant-table-cell-row-hover {
-        background: none !important;
-    }
+  .ant-table-row .ant-table-cell-row-hover {
+    background: none !important;
+  }
 }
 
-.go{
+.go {
   padding: 8px 35px;
   border-radius: 8px;
-  background-color: #02D169;
+  background-color: #02d169;
   font-weight: 500;
 }
-.wait{
+.wait {
   padding: 8px 32px;
   border-radius: 8px;
-  background-color: #F5A100;
+  background-color: #f5a100;
   font-weight: 500;
 }
 
-.live-mobile-table{
+.live-mobile-table {
   display: none;
 }
-.header-text{
+.header-text {
   font-size: 32px;
   line-height: 32px;
   white-space: normal;
@@ -197,54 +204,54 @@ body {
   max-width: 100%;
   text-align: start;
 }
-.bottom-text-header{
+.bottom-text-header {
   gap: 20px;
 }
-.result-table-mobile{
+.result-table-mobile {
   display: none;
 }
-.filter-mobile{
+.filter-mobile {
   display: none;
 }
 @media (max-width: 768px) {
-  .live-table{
+  .live-table {
     display: none;
   }
-  .live-mobile-table{
+  .live-mobile-table {
     display: block;
   }
-  .header-text{
+  .header-text {
     font-size: 24px;
   }
-  .fs-20{
+  .fs-20 {
     font-size: 16px;
   }
-  .tab-box{
+  .tab-box {
     width: 100%;
   }
-  .tab{
+  .tab {
     font-size: 16px;
     min-width: 150px;
     min-height: 50px;
   }
-  .bottom-text-header{
-    gap:10px;
+  .bottom-text-header {
+    gap: 10px;
   }
-  .filter-web{
+  .filter-web {
     display: none;
   }
-  .result-table-web{
+  .result-table-web {
     display: none;
   }
-  .result-table-mobile{
+  .result-table-mobile {
     display: block;
   }
-  .filter-mobile{
+  .filter-mobile {
     display: block;
   }
 }
 @media (max-width: 370px) {
-  .bottom-text-header{
+  .bottom-text-header {
     gap: 6px;
     margin-bottom: 50px !important;
   }
@@ -261,34 +268,48 @@ body {
 .ant-collapse-expand-icon {
   padding-inline-end: 0 !important;
 }
-.ant-collapse{
-  background-color: #1A1635;
-  border-color: #1A1635;
+.ant-collapse {
+  background-color: #1a1635;
+  border-color: #1a1635;
 }
-.ant-collapse .ant-collapse-content{
-  background: #1A1635;
+.ant-collapse .ant-collapse-content {
+  background: #1a1635;
   border-color: black;
 }
-.mobile-cart-collapse{
+.mobile-cart-collapse {
   padding: 15px 20px;
   padding-right: 30px;
-  background-color: #1A1635;
+  background-color: #1a1635;
   border-radius: 8px;
 }
-.filter-button{
-  background-color: #1A1635;
+.filter-button {
+  background-color: #1a1635;
   display: flex;
   gap: 10px;
   align-items: center;
   padding: 8px 16px;
   border-radius: 8px;
 }
-.filter-elements{
+.filter-elements {
   padding: 4px 12px;
   background-color: #0a8bec;
   display: flex;
   gap: 10px;
   border-radius: 20px;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
+}
+.ant-modal .ant-modal-content {
+  background-color: #080915;
+  border: 2px solid #1a1635;
+  margin: 0 auto !important;
+}
+.ant-modal .ant-modal-header {
+  background-color: #080915;
+}
+.ant-modal-title {
+  color: white !important;
+}
+.ant-modal{
+  left: 8px;
 }
