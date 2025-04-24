@@ -2,7 +2,9 @@ import "./global.css"
 import Header from "./components/Header"
 import Tabs from "./components/Tabs"
 import { useState } from "react"
-import Live from "./components/Result"
+import Result from "./components/Result"
+import NotFoundTab from "./components/NotFoundTab"
+import Live from "./components/Live"
 
 
 function App() {
@@ -12,9 +14,10 @@ function App() {
     switch (tab) {
       case 1:
         return <Live/>
-      
+      case 4:
+        return <Result/>
       default:
-        break;
+        return <NotFoundTab/>;
     }
   }
 

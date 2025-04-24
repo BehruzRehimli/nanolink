@@ -155,3 +155,16 @@ body {
         background: none !important;
     }
 }
+
+.go{
+  padding: 8px 35px;
+  border-radius: 8px;
+  background-color: #02D169;
+  font-weight: 500;
+}
+.wait{
+  padding: 8px 32px;
+  border-radius: 8px;
+  background-color: #F5A100;
+  font-weight: 500;
+}

@@ -158,7 +158,7 @@ export const filters = {
       ),
     },
     {
-      name: "Parallel Bars",
+      name: "Paralel Bars",
       svg: (
         <svg
           width="57"

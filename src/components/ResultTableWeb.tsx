@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Filter } from "./Result";
 import { getFlag, mainDatas } from "../constants/datas";
 
-interface DataType {
+export interface DataType {
   name: string;
   level: string;
   type: string;
@@ -44,7 +44,7 @@ const columns: ColumnsType<DataType> = [
     title: "Team",
     dataIndex: "team",
     render: (data: any) => {
-      return <div className="d-flex gap-2 align-items-center">{getFlag(data?.name)}{data?.name}</div>
+      return <div style={{height:"32px"}} className="d-flex gap-2 align-items-center">{getFlag(data?.name)}{data?.name}</div>
     },
     key: "rank",
     width: "8%"
@@ -53,13 +53,15 @@ const columns: ColumnsType<DataType> = [
     title: "Bib",
     dataIndex: "bib",
     key: "bib",
-    width: "5%"
+    width: "5%",
+    render:(data:any)=><div style={{height:"32px"}} className="d-flex gap-2 align-items-center">{data}</div>
   },
   {
     title: "Name",
     dataIndex: "name",
     key: "name",
-    width: "50%"
+    width: "50%",
+    render:(data:any)=><div style={{height:"32px"}} className="d-flex gap-2 align-items-center">{data}</div>
   },
   {
     title: "D",

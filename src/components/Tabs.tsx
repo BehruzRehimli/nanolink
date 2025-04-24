@@ -3,9 +3,9 @@ import { Button } from 'antd'
 const Tabs = ({ tab, setTab }: { tab: number, setTab: Function }) => {
     return (
         <div className='d-flex justify-content-center align-items-center mt-5'>
-            <Button type='text' onClick={() => setTab(1)} className={`tab ${tab == 1 && "active"} d-flex gap-2 ffp`}>
-                <span style={{ color: "#FB0000", fontSize: 30 }}>•</span>
-                Live
+            <Button type='text' onClick={() => setTab(1)} className={`tab ${tab == 1 && "active"} d-flex gap-2 ffp align-items-center`}>
+                <span style={{ backgroundColor: "#FB0000", height:6, width:6, borderRadius:"50%" }}></span>
+                <span>Live</span>
             </Button>
             <Button type='text' onClick={() => setTab(2)} className={`tab ${tab == 2 && "active"} d-flex gap-2`}>
                 Startlist
