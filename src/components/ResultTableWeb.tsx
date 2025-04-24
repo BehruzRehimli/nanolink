@@ -102,30 +102,10 @@ const columns: ColumnsType<DataType> = [
   }
 ];
 
-const ResultTableWeb = ({ filter }: { filter: Filter }) => {
-  const [datas, setDatas] = useState<any>([]);
+const ResultTableWeb = ({ filter, datas }: { filter: Filter,datas:DataType[] }) => {
 
-  useEffect(() => {
-    getDatas();
-  }, [filter]);
-
-  const getDatas = async () => {
-    setDatas(null);
-    setTimeout(() => {
-      setDatas(
-        mainDatas.filter(
-          (d: any) =>
-            d.type == filter.type &&
-            filter.step == d.step &&
-            filter.level == d.level &&
-            filter.branch == d.branch &&
-            filter.gender == d.gender
-        ).sort((a: any, b: any) => a.rank - b.rank)
-      );
-    }, 1000);
-  };
   return (
-    <div className="table-container pt-5 mt-5">
+    <div className="table-container pt-5 mt-5 result-table-web">
       {datas != null ? (
         <Table columns={columns} dataSource={datas} pagination={false} />
       ) : (

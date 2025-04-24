@@ -10,7 +10,7 @@ const FilterWeb = ({
   setFilter: Function;
 }) => {
   return (
-    <div>
+    <div className="filter-web">
       <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5">
         <div className="filter-box">
           {filters.genders.map((gender: string) => (

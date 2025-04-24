@@ -47,7 +47,21 @@ body {
     font-size: 20px;
 }
 .tab-box{
+  display: flex;
   overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.tab-box::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-box > div {
+  min-width: max-content;
+  display: flex;
 }
 
 .tab {
@@ -183,7 +197,15 @@ body {
   max-width: 100%;
   text-align: start;
 }
-
+.bottom-text-header{
+  gap: 20px;
+}
+.result-table-mobile{
+  display: none;
+}
+.filter-mobile{
+  display: none;
+}
 @media (max-width: 768px) {
   .live-table{
     display: none;
@@ -198,7 +220,33 @@ body {
     font-size: 16px;
   }
   .tab-box{
-    padding-left: 100px;
+    width: 100%;
+  }
+  .tab{
+    font-size: 16px;
+    min-width: 150px;
+    min-height: 50px;
+  }
+  .bottom-text-header{
+    gap:10px;
+  }
+  .filter-web{
+    display: none;
+  }
+  .result-table-web{
+    display: none;
+  }
+  .result-table-mobile{
+    display: block;
+  }
+  .filter-mobile{
+    display: block;
+  }
+}
+@media (max-width: 370px) {
+  .bottom-text-header{
+    gap: 6px;
+    margin-bottom: 50px !important;
   }
 }
 .ant-collapse-header {
@@ -226,4 +274,21 @@ body {
   padding-right: 30px;
   background-color: #1A1635;
   border-radius: 8px;
+}
+.filter-button{
+  background-color: #1A1635;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.filter-elements{
+  padding: 4px 12px;
+  background-color: #0a8bec;
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+  align-items: center;
+  font-size: 14px;
 }
