@@ -58,7 +58,7 @@ const Result = () => {
   return (
     <>
       <FilterWeb filter={filter} setFilter={setFilter} />
-      <ResultTableWeb filter={filter} datas={datas} />
+      <ResultTableWeb datas={datas} />
       <FilterMobile filter={filter} setFilter={setFilter} />
       <ResultTableMobile datas={datas} />
     </>

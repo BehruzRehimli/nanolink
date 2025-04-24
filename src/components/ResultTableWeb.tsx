@@ -1,8 +1,6 @@
 import { Spin, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { useEffect, useState } from "react";
-import { Filter } from "./Result";
-import { getFlag, mainDatas } from "../constants/datas";
+import { getFlag } from "../constants/datas";
 
 export interface DataType {
   name: string;
@@ -102,7 +100,7 @@ const columns: ColumnsType<DataType> = [
   }
 ];
 
-const ResultTableWeb = ({ filter, datas }: { filter: Filter,datas:DataType[] }) => {
+const ResultTableWeb = ({ datas }: {datas:DataType[] }) => {
 
   return (
     <div className="table-container pt-5 mt-5 result-table-web">
