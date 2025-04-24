@@ -2,7 +2,7 @@ import { Button } from 'antd'
 
 const Tabs = ({ tab, setTab }: { tab: number, setTab: Function }) => {
     return (
-        <div className='d-flex justify-content-center align-items-center mt-5'>
+        <div className='d-flex justify-content-center align-items-center mt-5 tab-box' >
             <Button type='text' onClick={() => setTab(1)} className={`tab ${tab == 1 && "active"} d-flex gap-2 ffp align-items-center`}>
                 <span style={{ backgroundColor: "#FB0000", height:6, width:6, borderRadius:"50%" }}></span>
                 <span>Live</span>

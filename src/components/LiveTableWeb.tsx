@@ -1,28 +1,11 @@
-import { getFlag, mainDatas } from "../constants/datas";
+import { getFlag } from "../constants/datas";
 import Table, { ColumnsType } from "antd/es/table";
 import { DataType } from "./ResultTableWeb";
-import { useEffect, useState } from "react";
 import { Spin } from "antd";
 import { filters } from "../constants/filter";
 
-const LiveTableWeb = () => {
-  const [datas, setDatas] = useState<any>([]);
+const LiveTableWeb = ({datas}:{datas:DataType[]}) => {
 
-  useEffect(() => {
-    getDatas();
-  }, []);
-
-  const getDatas = async () => {
-    setDatas(null);
-    setTimeout(() => {
-      setDatas(
-        mainDatas
-          //   .filter((d: any) => true)
-          .slice(20, 30)
-          .sort((a: any, b: any) => a.rank - b.rank)
-      );
-    }, 1000);
-  };
 
   const columns: ColumnsType<DataType> = [
     {
